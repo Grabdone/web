@@ -1,5 +1,5 @@
 
-<div class="navbar">
+<div class="usernavbar">
   <nav class="navbar navbar-expand-lg navbar-light bg-light" style="width:100%">
     <a class="navbar-brand" href="#">Cricinfo</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,7 +17,7 @@
           <a class="nav-link" href="#">Highlights</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link " href="{{ url('/main/logout') }}">Logout</a>
+          <a class="nav-link " href="{{ url('/main') }}">Login</a>
         </li>
       </ul>
     </div>

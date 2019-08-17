@@ -38,13 +38,13 @@ class MainController extends Controller
    
     function successlogin()
     {
-        return view('admin.successlogin');
+        return redirect()->route('headline.index');
     }
 
     function logout()
     {
         Auth::logout();
-        return redirect('main');
+        return redirect()->route('userheadline.index');
     }
 
 }

@@ -25,6 +25,13 @@ Route::get('indexbbl', 'HeadlineController@indexbbl')->name('headline.indexbbl')
 Route::get('indexpsl', 'HeadlineController@indexpsl')->name('headline.indexpsl');
 Route::resource('headline', 'HeadlineController');
 
+Route::get('userindexmen', 'UserHeadlineController@indexmen')->name('userheadline.indexmen');
+Route::get('userindexbbl', 'UserHeadlineController@indexbbl')->name('userheadline.indexbbl');
+Route::get('userindexpsl', 'UserHeadlineController@indexpsl')->name('userheadline.indexpsl');
+Route::resource('userheadline', 'UserHeadlineController');
+
+
+
 Route::get('/createheadline', 'HeadlineController@create');
 Route::post('/createheadline', 'HeadlineController@store');
 Route::get('/adminheadlines', 'HeadlineController@index');
