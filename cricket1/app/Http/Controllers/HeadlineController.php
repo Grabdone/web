@@ -15,15 +15,31 @@ class HeadlineController extends Controller
      */
     public function index()
     {
-        $headlines= headlines::all()->toArray();
+        $headlines= headlines::all()->sortByDesc("id");
         return view('admin.adminheadlines',compact('headlines'));
     }
-
+    
+    
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
+    public function indexmen()
+    {
+        $headlines= headlines::where('series','Icc Men')->orderBy('id','desc')->get();
+        return view('admin.adminheadlines',compact('headlines'));
+    }
+    public function indexbbl()
+    {
+        $headlines= headlines::where('series','Big Bash')->orderBy('id','desc')->get();
+        return view('admin.adminheadlines',compact('headlines'));
+    }
+    public function indexpsl()
+    {
+        $headlines= headlines::where('series','PSL')->orderBy('id','desc')->get();
+        return view('admin.adminheadlines',compact('headlines'));
+    }
     public function create()
     {
         return view('admin.createheadline');

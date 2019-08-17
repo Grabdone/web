@@ -31,7 +31,7 @@
     <div class="form-group">
         <select name="series">
         <option value="Icc Men">Icc Men</option>
-        <option value="Icc Women">Icc Women</option>
+        <option value="Big Bash">Big Bash</option>
         <option value="PSL">PSL</option>
         </select>
    </div>

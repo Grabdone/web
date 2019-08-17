@@ -20,7 +20,11 @@ Route::post('/main/checklogin', 'MainController@checklogin');
 Route::get('main/successlogin', 'MainController@successlogin');
 Route::get('main/logout', 'MainController@logout');
 
+Route::get('indexmen', 'HeadlineController@indexmen')->name('headline.indexmen');
+Route::get('indexbbl', 'HeadlineController@indexbbl')->name('headline.indexbbl');
+Route::get('indexpsl', 'HeadlineController@indexmen')->name('headline.indexpsl');
 Route::resource('headline', 'HeadlineController');
+
 Route::get('/createheadline', 'HeadlineController@create');
 Route::post('/createheadline', 'HeadlineController@store');
 Route::get('/adminheadlines', 'HeadlineController@index');

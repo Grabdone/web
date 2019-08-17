@@ -3,12 +3,19 @@
 @section('content')
      @include('header')
 
-            
+        <div class="sidenav">
+        <a href="{{route('headline.index')}}">Cricket</a>
+        <a href="{{route('headline.indexmen')}}">ICC Men</a>
+        <a href={{route('headline.indexbbl')}}>Big Bash</a>
+        <a href={{route('headline.indexpsl')}}>PSL</a>
+        <a href="{{route('headline.create')}}" class="btn btn-primary" style="color:white;">Add headline</a>
+        </div>
 
-
-
+        <!-- Page content -->
+        <div class="main">
+        
         <div aling="left">
-        <a href="{{route('headline.create')}}" class="btn btn-primary">Add headline</a>
+        
         <br />
         <br />
         </div>
@@ -16,7 +23,7 @@
         <div class="alert alert-success">
           <p>{{$message}}</p>
         </div>
-      @endif
+         @endif
         @foreach($headlines as $row)
             <div class="container"style="margin-top:10px;">
                 <div class="panel-thumbnail"><img src="images\{{$row['imagepath']}}" class="img-responsive"></div>
@@ -39,6 +46,41 @@
                 </div>
             </div>
         @endforeach
+        </div>    
+
+<style>
+        /* The sidebar menu */
+        .sidenav {
+        position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+        left: 0;
+        background-color: white; /* Black */
+        overflow-x: hidden; /* Disable horizontal scroll */
+        padding-top: 20px;
+        }
+
+        /* The navigation menu links */
+        .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        }
+
+        /* When you mouse over the navigation links, change their color */
+        .sidenav a:hover {
+        color: #f1f1f1;
+        }
+
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav a {font-size: 18px;}
+        }
+</style>
+
+        
 
         
 
