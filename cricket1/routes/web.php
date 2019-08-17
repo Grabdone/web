@@ -22,7 +22,7 @@ Route::get('main/logout', 'MainController@logout');
 
 Route::get('indexmen', 'HeadlineController@indexmen')->name('headline.indexmen');
 Route::get('indexbbl', 'HeadlineController@indexbbl')->name('headline.indexbbl');
-Route::get('indexpsl', 'HeadlineController@indexmen')->name('headline.indexpsl');
+Route::get('indexpsl', 'HeadlineController@indexpsl')->name('headline.indexpsl');
 Route::resource('headline', 'HeadlineController');
 
 Route::get('/createheadline', 'HeadlineController@create');
