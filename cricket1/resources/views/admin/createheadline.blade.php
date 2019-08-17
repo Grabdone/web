@@ -23,6 +23,13 @@
 
   <form method="post" action="{{url('headline')}}">
    {{csrf_field()}}
+    <div class="form-group">
+        <select name="series">
+        <option value="Icc Men">Icc Men</option>
+        <option value="Icc Women">Icc Women</option>
+        <option value="PSL">PSL</option>
+        </select>
+   </div>
    <div class="form-group">
     <input type="text" name="title" class="form-control" placeholder="Enter title" />
    </div>

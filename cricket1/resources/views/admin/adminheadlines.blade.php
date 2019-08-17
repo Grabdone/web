@@ -2,6 +2,11 @@
 
 @section('content')
      @include('header')
+
+            
+
+
+
         <div aling="left">
         <a href="{{route('headline.create')}}" class="btn btn-primary">Add headline</a>
         <br />

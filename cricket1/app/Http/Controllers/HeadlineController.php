@@ -42,6 +42,7 @@ class HeadlineController extends Controller
             'title'=> 'required',
             'auther'=> 'required',
             'news'=> 'required',
+            'series'=> 'required',
             'timepublished'=> 'required'
 
         ]);
@@ -59,6 +60,7 @@ class HeadlineController extends Controller
             'auther'=>  $request->get('auther'),
             'news'=>  $request->get('news'),
             'timepublished'=>  $request->get('timepublished'),
+            'series'=>  $request->get('series'),
             'imagepath'=> $request->get('imagepath')
         ]);
 
@@ -106,6 +108,7 @@ class HeadlineController extends Controller
             'title'=> 'required',
             'auther'=> 'required',
             'news'=> 'required',
+            'series'=> 'required',
             'timepublished'=> 'required'
         ]);
         $headline = headlines::find($id);
@@ -113,6 +116,7 @@ class HeadlineController extends Controller
         $headline->title=$request->get('title');
         $headline->auther=$request->get('auther');
         $headline->news=$request->get('news');
+        $headline->series=$request->get('series');
         $headline->timepublished=$request->get('timepublished');
         
         $headline->save();

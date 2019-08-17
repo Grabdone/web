@@ -27,6 +27,14 @@
    <div class="form-group">
     <input type="text" name="title" class="form-control" value="{{$headline->title}}" placeholder="Enter title" />
    </div>
+   <label for="series">Choose series</label>
+    <div class="form-group">
+        <select name="series">
+        <option value="Icc Men">Icc Men</option>
+        <option value="Icc Women">Icc Women</option>
+        <option value="PSL">PSL</option>
+        </select>
+   </div>
    <div class="form-group">
     <input type="text" name="auther" class="form-control" value="{{$headline->auther}}" placeholder="Enter auther name" />
    </div>

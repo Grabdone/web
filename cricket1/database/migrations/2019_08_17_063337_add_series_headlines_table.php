@@ -15,7 +15,6 @@ class AddSeriesHeadlinesTable extends Migration
     {
         Schema::table('headlines', function (Blueprint $table) {
             $table->string('series');
-            
         });
     }
 
