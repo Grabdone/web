@@ -16,7 +16,7 @@
  <body>
   <br />
   <div class="container box">
-   <h3 align="center">Simple Login System in Laravel</h3><br />
+   <h3 align="center">Login</h3><br />
 
    @if(isset(Auth::user()->email))
     <script>window.location="/main/successlogin";</script>
@@ -39,7 +39,7 @@
     </div>
    @endif
 
-   <form method="post" action="{{ url('/main/checklogin') }}">
+   <form method="post" action="{{ url('headline') }}">
     {{ csrf_field() }} 
     <div class="form-group">
      <label>Enter Email</label>
