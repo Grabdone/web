@@ -46,3 +46,9 @@ Route::get('/createheadline', 'HeadlineController@create');
 Route::post('/createheadline', 'HeadlineController@store');
 Route::get('/adminheadlines', 'HeadlineController@index');
 
+
+
+Route::get('/uploadhighlight', 'VideoController@create');
+Route::get('/adminhighlights', 'VideoController@index');
+Route::resource('video', 'VideoController');
+
