@@ -31,6 +31,11 @@ Route::get('userindexpsl', 'UserHeadlineController@indexpsl')->name('userheadlin
 Route::resource('userheadline', 'UserHeadlineController');
 
 
+Route::get('/creategallary', 'GalleryController@create');
+Route::get('/admingallery', 'GalleryController@index');
+Route::resource('pic', 'GalleryController');
+
+
 
 Route::get('/createheadline', 'HeadlineController@create');
 Route::post('/createheadline', 'HeadlineController@store');
