@@ -16,10 +16,13 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ url('/admingallery') }}">Gallery</a>
         </li>
-        <li class="nav-item">
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+      <li><a href="{{ url('/adminheadlines') }}"><span class="glyphicon glyphicon-log-in"></span> saad_yousaf@gmail.com</a></li>
+      <li class="nav-item">
           <a class="nav-link " href="{{ url('/main/logout') }}">Logout</a>
         </li>
-      </ul>
+    </ul>
     </div>
   </nav>
   </div>

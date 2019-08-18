@@ -1,9 +1,7 @@
 @extends('app')
 
 @section('content')
-     @include('header')
-        <a href="{{route('pic.create')}}" class="d-flex justify-content-center btn btn-primary" style="color:white;" >Add Image</a>
-
+     @include('user.userheader')
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             @foreach ($pic as $images)

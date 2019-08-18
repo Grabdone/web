@@ -35,6 +35,9 @@ Route::get('/creategallary', 'GalleryController@create');
 Route::get('/admingallery', 'GalleryController@index');
 Route::resource('pic', 'GalleryController');
 
+Route::get('/usergallery', 'UserGalleryController@index');
+Route::resource('usergallery', 'UserGalleryController');
+
 
 
 Route::get('/createheadline', 'HeadlineController@create');
