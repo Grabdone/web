@@ -2,6 +2,14 @@
 
 @section('content')
      @include('user.userheader')
+
+        <div class="navbar">
+        <a href="{{route('usergallery.index')}}">Pakistan</a>
+        <a href="{{route('usergallery.indexaus')}}">Australia</a>
+        <a href={{route('usergallery.indexeng')}}>England</a>
+        <a href={{route('usergallery.indexwind')}}>West Indies</a>
+        </div>
+
         <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             @foreach ($pic as $images)

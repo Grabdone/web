@@ -14,9 +14,25 @@ class UserGalleryController extends Controller
      */
     public function index()
     {
-        $pic= pic::all()->sortByDesc("id");
+        $pic= pic::where('team','Pakistan')->orderBy('id','desc')->get();
         return view('user.usergallery',compact('pic'));
     }
+    public function indexaus()
+    {
+        $pic= pic::where('team','Australia')->orderBy('id','desc')->get();
+        return view('user.usergallery',compact('pic'));
+    }
+    public function indexeng()
+    {
+        $pic= pic::where('team','England')->orderBy('id','desc')->get();
+        return view('user.usergallery',compact('pic'));
+    }
+    public function indexwind()
+    {
+        $pic= pic::where('team','West Indies')->orderBy('id','desc')->get();
+        return view('user.usergallery',compact('pic'));
+    }
+    
 
     /**
      * Show the form for creating a new resource.

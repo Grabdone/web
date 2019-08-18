@@ -35,7 +35,9 @@ Route::get('/creategallary', 'GalleryController@create');
 Route::get('/admingallery', 'GalleryController@index');
 Route::resource('pic', 'GalleryController');
 
-Route::get('/usergallery', 'UserGalleryController@index');
+Route::get('indexaus', 'UserGalleryController@indexaus')->name('usergallery.indexaus');
+Route::get('indexeng', 'UserGalleryController@indexeng')->name('usergallery.indexeng');
+Route::get('indexwind', 'UserGalleryController@indexwind')->name('usergallery.indexwind');
 Route::resource('usergallery', 'UserGalleryController');
 
 
