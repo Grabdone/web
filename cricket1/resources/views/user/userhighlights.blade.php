@@ -1,8 +1,7 @@
 @extends('app')
 
 @section('content')
-     @include('header')
-        <a href="{{route('video.create')}}" class="d-flex justify-content-center btn btn-primary" style="color:white;" >Add Video</a>
+     @include('user.userheader')
                 <!-- Grid row -->
                             
                 <div class="row">
@@ -37,14 +36,7 @@
 
                     <a><img class="img-fluid z-depth-1" src="{{$vid['tumbnailpath']}}" alt="video"
                         data-toggle="modal" data-target="#modal1"></a>
-                            <form method="post" class="delete_form" action="{{action('VideoController@destroy',$vid['id'])}}">
-                            {{csrf_field()}}
-                            <input type="hidden" name="_method" value="DELETE"/>
-                            <button type="submit" class="btn carousel-button btn btn-danger " >
-                            <i class="fa fa-times-circle"></i> Delete Image
-                            </button>
-                            </form>
-
+                            
                 </div>
                 <!-- Grid column -->
              @endforeach

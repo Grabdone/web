@@ -52,3 +52,6 @@ Route::get('/uploadhighlight', 'VideoController@create');
 Route::get('/adminhighlights', 'VideoController@index');
 Route::resource('video', 'VideoController');
 
+Route::get('/userhighlights', 'UserVideoController@index');
+Route::resource('videos', 'UserVideoController');
+

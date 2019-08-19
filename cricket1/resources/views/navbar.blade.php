@@ -11,7 +11,7 @@
           <a class="nav-link" href="{{ url('/adminheadlines') }}">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Highlights</a>
+          <a class="nav-link" href="{{ url('/adminhighlights') }}">Highlights</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ url('/admingallery') }}">Gallery</a>

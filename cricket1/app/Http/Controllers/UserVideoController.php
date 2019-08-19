@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\video;
 
-class VideoController extends Controller
+class UserVideoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +15,7 @@ class VideoController extends Controller
     public function index()
     {
         $video= video::all()->sortByDesc("id");
-        return view('admin.adminhighlights',compact('video'));
+        return view('user.userhighlights',compact('video'));
     }
 
     /**
@@ -25,7 +25,7 @@ class VideoController extends Controller
      */
     public function create()
     {
-        return view('admin.uploadhighlight');
+        //
     }
 
     /**
@@ -36,18 +36,7 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-            'videopath'=> 'required',
-            'tumbnailpath'=> 'required',
-            'videotitle'=> 'required',
-        ]);
-        $video = new video([
-            'videopath'=>   $request->get('videopath'),
-            'tumbnailpath'=>  $request->get('tumbnailpath'),
-            'videotitle'=>  $request->get('videotitle')
-        ]);
-        $video->save();
-        return redirect()->route('video.index')->with('success','Data Added');
+        //
     }
 
     /**
@@ -92,8 +81,6 @@ class VideoController extends Controller
      */
     public function destroy($id)
     {
-        $video = video::find($id);
-        $video->delete();
-        return redirect()->route('video.index')->with('success','Data Deleted');
+        //
     }
 }
